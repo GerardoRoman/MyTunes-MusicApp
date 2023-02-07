@@ -6,6 +6,22 @@
   <script src="main.js" defer></script>
   <title>Music Search</title>
 </head>
+
 <body>
+  <form id="search-form" method="post">
+    <div>
+      <label for="search-text">Search Music</label>
+      <input
+      type="text"
+      name="search-text"
+      id="search-text"
+      placeholder="Enter song name/artist etc."
+      required
+      />
+    </div>
+    <button type="submit">Search</button>
+  </form>
+  <h3>Results Found:</h3>
+  <div id="musicContainer"></div>
 </body>
 </html>
