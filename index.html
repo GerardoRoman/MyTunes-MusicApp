@@ -4,25 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="main.js" defer></script>
+  <link rel="stylesheet" href="main.css">
   <title>Music Search</title>
 </head>
 
 <body>
   <form id="search-form" method="post">
-    <audio id="audio" autoplay controls src =></audio>
-    <div>
+    <h1 class="page-title">MyTunes</h1>
+    <div class="search-bar">
       <label for="search-text">Search Music</label>
-      <input
-      type="text"
-      name="search-text"
-      id="search-text"
-      placeholder="Enter song name/artist etc."
-      required
-      />
+      <input type="text" name="search-text" id="search-text" placeholder="Enter song name or artist" required/>
     </div>
     <button type="submit">Search</button>
   </form>
-  <h3>Results Found:</h3>
+
+  <!-- audio player -->
+  <audio id="audio" autoplay controls src =></audio>
+
+  <!-- results -->
+  <h3 class="search-results-h3">Results Found:</h3>
   <div id="musicContainer"></div>
 </body>
 </html>

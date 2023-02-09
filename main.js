@@ -33,7 +33,18 @@ function search (searchTerm) {
     });
 }
 
+// display results from API
 function buildResultsHtml(resultsArray) {
+
+    // for no results
+    if (resultsArray.length === 0) {
+        let noResults = document.createElement("p");
+        noResults.classList.add("no-results");
+        noResults.innerText = "No results found";
+        container.appendChild(noResults);
+        return;
+
+    } else {
     for (let result of resultsArray) {
         let songDiv = document.createElement("div");
         musicContainer.appendChild(songDiv);
@@ -60,4 +71,5 @@ function buildResultsHtml(resultsArray) {
         player.src = playSrc;
     })
     }
+}
 }
