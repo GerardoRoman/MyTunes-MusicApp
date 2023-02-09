@@ -65,6 +65,7 @@ function buildResultsHtml(resultsArray) {
         artistEl.innerText = result.artistName
         songDiv.appendChild(artistEl);
 
+    // music player
         coverDiv.addEventListener("click", function (event) {
         let playSrc = `${result.previewUrl}`;
         console.log(playSrc);
