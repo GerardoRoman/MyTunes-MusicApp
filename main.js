@@ -1,7 +1,10 @@
 const form = document.querySelector("#search-form");
 
-const baseUrl = 'https://itunes.apple.com/search?term='
-const container = document.querySelector('#musicContainer')
+const baseUrl = 'https://itunes.apple.com/search?term=';
+
+const container = document.querySelector('#musicContainer');
+
+const player = document.querySelector("#audio");
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -51,5 +54,10 @@ function buildResultsHtml(resultsArray) {
         artistEl.innerText = result.artistName
         songDiv.appendChild(artistEl);
 
+        coverDiv.addEventListener("click", function (event) {
+        let playSrc = `${result.previewUrl}`;
+        console.log(playSrc);
+        player.src = playSrc;
+    })
     }
 }
